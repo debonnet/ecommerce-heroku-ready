@@ -18,6 +18,13 @@ if not settings.DEBUG:
     'localflavor',
     )
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(settings.BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
     try:
         import dj_database_url
         DATABASES['default'] = dj_database_url.config()
@@ -36,7 +43,7 @@ if not settings.DEBUG:
 
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
-    
+
     MEDIA_ROOT = os.path.join(os.path.dirname(settings.BASE_DIR), "static", "media")
     #MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
 
