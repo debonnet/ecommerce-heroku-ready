@@ -122,7 +122,12 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 
-
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.path.join(settings.BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 
