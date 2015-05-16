@@ -1,4 +1,8 @@
-if not DEBUG:
+import os
+from django.conf import settings
+
+
+if not setting.DEBUG:
     INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,14 +35,14 @@ if not DEBUG:
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+    MEDIA_ROOT = os.path.join(os.path.dirname(settings.BASE_DIR), "static", "media")
     #MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
 
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, "static"),
+        os.path.join(settings.BASE_DIR, "static"),
     )
 
     TEMPLATE_DIRS = (
-        os.path.join(BASE_DIR, 'templates'),
+        os.path.join(settings.BASE_DIR, 'templates'),
     )
