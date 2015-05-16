@@ -1,10 +1,11 @@
 ecommerce/ecommerce/email_settings.py
 static
+
 #ignore sublime project
 *.sublime-project
 *.sublime-workspace
 
-
+*.sqlite3
 /ecommerce/settings/local.py
 local.py
 # Byte-compiled / optimized / DLL files
