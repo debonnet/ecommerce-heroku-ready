@@ -6,8 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^$', 'products.views.home', name='home'),
+    url(r'^testje/$', 'testje.views.search'),
     url(r'^s/$', 'products.views.search', name='search'),
     url(r'^products/$', 'products.views.all', name='products'),
     url(r'^products/(?P<slug>[\w-]+)/$', 'products.views.single', name='single_product'),
