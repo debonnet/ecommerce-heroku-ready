@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 
 
-if not setting.DEBUG:
+if not settings.DEBUG:
     INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
