@@ -1,22 +1,6 @@
 import os
 from django.conf import settings
 
-
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-
-MEDIA_ROOT = os.path.join(os.path.dirname(settings.BASE_DIR), "static", "media")
-#MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
-
-STATIC_ROOT = 'staticfiles'
-STATICFILES_DIRS = (
-    os.path.join(settings.BASE_DIR, "static"),
-)
-
-TEMPLATE_DIRS = (
-    os.path.join(settings.BASE_DIR, 'templates'),
-)
-
 if not settings.DEBUG:
     INSTALLED_APPS = (
     'django.contrib.admin',
@@ -50,6 +34,9 @@ if not settings.DEBUG:
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
+    
     MEDIA_ROOT = os.path.join(os.path.dirname(settings.BASE_DIR), "static", "media")
     #MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
 
