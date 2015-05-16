@@ -47,7 +47,7 @@ if not settings.DEBUG:
     MEDIA_ROOT = os.path.join(os.path.dirname(settings.BASE_DIR), "static", "media")
     #MEDIA_ROOT = '/Users/jmitch/Desktop/ecommerce/static/media/'
 
-    STATIC_ROOT = 'static'
+    STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
         os.path.join(settings.BASE_DIR, "static"),
     )
